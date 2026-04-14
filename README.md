@@ -1,4 +1,4 @@
-# ShipCore
+# ShipCore – Scalable Logistics Backend System
 
 Courier management project built using Spring Boot, MySQL, and REST APIs.
 

@@ -1,4 +1,4 @@
-# Parcel Nova
+# ShipCore
 
 Courier management project built using Spring Boot, MySQL, and REST APIs.
 

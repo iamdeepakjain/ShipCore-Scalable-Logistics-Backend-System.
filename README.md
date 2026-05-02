@@ -1,56 +1,55 @@
-# ShipCore 🚀
-### Scalable Logistics Backend System
+📦 ShipCore — Logistics Backend with Tracking, Analytics & AI Risk Prediction
+🚀 Overview
 
-ShipCore is a backend system designed for managing courier and logistics operations, built using Spring Boot and MySQL. It provides REST APIs for handling shipment lifecycle, tracking updates, and user management with a scalable architecture.
+ShipCore is a scalable backend system designed for courier and logistics management.
+It supports shipment lifecycle tracking, analytics, and rule-based AI prediction for delay risk estimation.
 
----
+🧠 Key Features
+User & Role-based system (Admin, User, Partner, Hub)
+Shipment creation and lifecycle tracking
+Real-time status updates (CREATED → IN_TRANSIT → DELIVERED)
+Tracking history with event logs
+Analytics endpoint (time, activity, movement analysis)
+AI-based delay risk prediction (rule-based intelligence)
 
-## 🛠️ Tech Stack
+⚙️ Tech Stack
+java
+Spring Boot
+Hibernate
+MySQL
+REST APIs
+Postman
 
-- Java
-- Spring Boot
-- MySQL
-- JPA / Hibernate
-- Maven
-- Postman
-
----
-
-## 📌 Features
-
-- 🔐 User Management & Authentication
-- 📦 Shipment (Courier) Creation & Handling
-- 📍 Parcel Tracking System
-- 🔄 Status Updates (In Transit, Delivered, etc.)
-- 🧱 Layered Architecture (Controller–Service–Repository)
-- ✅ Input Validation & Error Handling
-
----
-
-## 🏗️ Architecture
-
-The application follows a clean layered architecture:
-
+🏗 Architecture
 Controller → Service → Repository → Database
+                     ↓
+            AI Risk Prediction Layer
 
----
+📡 API Endpoints
+Method	Endpoint	Description
+POST	/packages	Create shipment
+GET	/packages	Get shipments
+PUT	/packages/{id}/status	Update status
+GET	/packages/{id}/history	Tracking history
+GET	/packages/{id}/analytics	Analytics data
+GET	/packages/{id}/ai-risk	AI risk prediction
 
-## 📡 API Overview
+🤖 AI Feature
 
-- `POST /auth/register` → Register user  
-- `POST /auth/login` → Login user  
+A rule-based intelligence system analyzes:
 
-- `POST /shipments` → Create shipment  
-- `GET /shipments/{id}` → Get shipment details  
-- `GET /shipments` → List shipments  
+Tracking frequency
+Time since creation
+Status progression
 
-- `PUT /shipments/{id}/status` → Update shipment status  
+It predicts shipment delay risk as:
 
----
+LOW
+MEDIUM
+HIGH
 
-## 🚀 Getting Started
+📸 Screenshots
+<img width="960" height="510" alt="2026-05-02 (1)" src="https://github.com/user-attachments/assets/c86d12bc-964f-4f84-89a0-1cc3cb8df6d5" />
 
-### Clone the repository
-```bash
-git clone https://github.com/iamdeepakjain/shipcore-backend.git
-cd shipcore-backend
+👨‍💻 Author
+Deepak Kumar Jain
